@@ -1,0 +1,50 @@
+$light-red: hsl(356, 100%, 66%);
+$very-light-red: hsl(355, 100%, 74%);
+$very-dark-blue: hsl(208, 49%, 24%);
+$white: hsl(0, 0%, 100%);
+$grayish-blue: hsl(240, 2%, 79%);
+$very-dark-grayish-blue: hsl(207, 13%, 34%);
+$very-dark-black-blue: hsl(240, 10%, 16%);
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.header-background{
+    position: absolute;
+    z-index: -1;
+    background-color: $very-light-red;
+
+}
+
+  .nav-bar{
+      display: flex;
+      margin: 2em 20em;
+  }
+
+  .nav{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      
+  }
