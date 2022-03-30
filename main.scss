@@ -30,21 +30,68 @@ html {
     height: auto;
   }
 
-.header-background{
-    position: absolute;
-    z-index: -1;
-    background-color: $very-light-red;
+  a{
+    text-decoration: none;
+    color: white;
+  }
 
+.hero{
+  height: 45vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  border-bottom-left-radius: 5em;
+  background-color: $very-light-red;
+  background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 }
 
-  .nav-bar{
-      display: flex;
-      margin: 2em 20em;
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8em;
+  padding-top: 3em;
+}
+
+.nav-links{
+    display: flex;
+    margin-left: 3em;
+    margin-right: 8em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-links{
+  *{
+    padding-left: 1em;
+  }
+}
+
+.btn-light{
+  padding: 0.5em 1.8em;
+  color: $light-red;
+  background-color: $white;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.content{
+  display: flex;
+  margin-top: 5em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: $white;
+  flex-wrap: wrap;
+
+  h1{
+    font-size: 3.5em;
   }
 
-  .nav{
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      
+  .btns{
+    align-self: flex-end;
   }
+}
