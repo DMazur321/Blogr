@@ -248,7 +248,7 @@ body{
 
 .about{
   text-align: center;
-  padding: 0 1rem;
+  // padding: 0 1rem;
 
   .title{
     margin-top: 10rem;
@@ -258,7 +258,15 @@ body{
   }
 
   .picture{
-    margin-top: 5rem;
+    // background-image: url(../images/illustration-editor-mobile.svg);
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: center;
+    margin-top: 4rem;
+    // width: 100%;
+    // padding-bottom: 81.6%;
+    padding-top: 16.6rem;
+    padding-bottom: 16.6rem;
   }
 
   .container{
@@ -267,12 +275,14 @@ body{
     h3{
       // width: 200px;
       padding: 0 3rem;
-      margin-top: 3rem;
-      font-size: 1.5rem;
+      margin-top: 4rem;
+      font-size: 2.8rem;
     }
     p{
-      padding: 0 1.5rem;
       margin-top: 1rem;
+      padding: 0 2rem;
+      font-size: 1.8rem;
+      font-weight: 100;
       color: var(--grey-text);
     }
   }
@@ -281,18 +291,102 @@ body{
 
 .state{
   margin-top: 10rem;
-  background-image: url(/images/bg-pattern-circles.svg), var(--state);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center -200px, center;
-  border-top-right-radius: 100px;
-  border-bottom-left-radius: 100px;
+  text-align: center;
+  // background-image: url(/images/bg-pattern-circles.svg), var(--state);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center -200px, center;
+  // border-top-right-radius: 100px;
+  // border-bottom-left-radius: 100px;
+
+  .picture{
+    background-image: url(../images/illustration-phones.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -20rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    //----------------------
+    width: min(100%, 52.2rem);
+    padding-bottom: clamp(40rem, 105%, 57.9rem);
+    //--------------------
+  }
 
   .container{
-    
+    background-color: var(--very-dark-blue);
+    background-image: url(../images/bg-pattern-circles.svg), var(--state);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -25rem, center;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 20rem 4rem 10rem 4rem;
+
     h3{
       color: var(--white);
-      margin-top: 3rem;
+      font-size: 3.5rem;
+      // margin-top: 3rem;
+    }
+
+    p{
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      font-weight: 100;
+      color: var(--white);
     }
   }
+}
+
+#first{
+  .picture{
+    background-image: url(../images/illustration-editor-mobile.svg);
+  }
+}
+
+
+#second{
+  .picture{
+    background-image: url(../images/illustration-laptop-mobile.svg);
+  }
+}
+
+.footer{
+  background-color: var(--very-dark-black-blue);
+  border-top-right-radius: 100px;
+  margin-top: 10rem;
+  text-align: center;
+  padding-top: 7rem;
+
+  .lists-container{
+    margin-top: 7.5rem;
+
+  ul{
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    
+    li a{
+      line-height: 1.8;
+      color: var(--grayish-blue);
+    }
+
+
+    li:nth-child(1) a{
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1.8rem;
+    }
+
+  }
+
+}
+
+.attribution{
+  // position: relative;
+  padding-top: 8rem;
+  font-size: 1.5rem;
+}
 }

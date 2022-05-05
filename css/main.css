@@ -185,7 +185,6 @@ body {
 
 .about {
   text-align: center;
-  padding: 0 1rem;
 }
 .about .title {
   margin-top: 10rem;
@@ -194,29 +193,96 @@ body {
   letter-spacing: -0.8px;
 }
 .about .picture {
-  margin-top: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 4rem;
+  padding-top: 16.6rem;
+  padding-bottom: 16.6rem;
 }
 .about .container h3 {
   padding: 0 3rem;
-  margin-top: 3rem;
-  font-size: 1.5rem;
+  margin-top: 4rem;
+  font-size: 2.8rem;
 }
 .about .container p {
-  padding: 0 1.5rem;
   margin-top: 1rem;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  font-weight: 100;
   color: var(--grey-text);
 }
 
 .state {
   margin-top: 10rem;
-  background-image: url(/images/bg-pattern-circles.svg), var(--state);
+  text-align: center;
+}
+.state .picture {
+  background-image: url(../images/illustration-phones.svg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center -200px, center;
+  margin-bottom: -20rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: min(100%, 52.2rem);
+  padding-bottom: clamp(40rem, 105%, 57.9rem);
+}
+.state .container {
+  background-color: var(--very-dark-blue);
+  background-image: url(../images/bg-pattern-circles.svg), var(--state);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -25rem, center;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
+  padding: 20rem 4rem 10rem 4rem;
 }
 .state .container h3 {
   color: var(--white);
+  font-size: 3.5rem;
+}
+.state .container p {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: var(--white);
+}
+
+#first .picture {
+  background-image: url(../images/illustration-editor-mobile.svg);
+}
+
+#second .picture {
+  background-image: url(../images/illustration-laptop-mobile.svg);
+}
+
+.footer {
+  background-color: var(--very-dark-black-blue);
+  border-top-right-radius: 100px;
+  margin-top: 10rem;
+  text-align: center;
+  padding-top: 7rem;
+}
+.footer .lists-container {
+  margin-top: 7.5rem;
+}
+.footer .lists-container ul {
   margin-top: 3rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.footer .lists-container ul li a {
+  line-height: 1.8;
+  color: var(--grayish-blue);
+}
+.footer .lists-container ul li:nth-child(1) a {
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 1.8rem;
+}
+.footer .attribution {
+  padding-top: 8rem;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
