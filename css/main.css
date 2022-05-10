@@ -9,7 +9,7 @@
   --very-light-gray: hsl(210, 6%, 94%);
   --grey-text: hsl(215, 8%, 39%);
   --background-gradient: linear-gradient(120deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-  --state: linear-gradient(90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  --state: linear-gradient(180deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
 }
 
 * {
@@ -34,7 +34,12 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--very-dark-blue);
   font-weight: bold;
 }
@@ -77,32 +82,42 @@ body {
 .header .nav {
   position: absolute;
   left: 50%;
-  top: 9.6rem;
-  width: 33rem;
   transform: translateX(-50%);
+  top: 12rem;
+  width: 33rem;
   text-align: center;
   background-color: var(--white);
   border-radius: 5px;
+  box-shadow: 0 5px 20px var(--grey-text);
+  font-size: 1.8rem;
   display: none;
+  color: var(--very-dark-blue);
 }
 .header .nav .nav-list .nav-item {
-  padding: 2rem 0;
+  cursor: pointer;
+  margin: 3rem 0;
 }
 .header .nav .nav-list .nav-item img {
   margin-left: 0.5rem;
 }
+.header .nav .nav-list .nav-item .arrow-light {
+  display: none;
+}
 .header .nav .nav-list .nav-item .sub-list {
   margin: 0 2rem;
-  margin-top: 10px;
-  padding-top: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
   border-radius: 5px;
+  font-size: 1.6rem;
   background-color: var(--very-light-gray);
-  color: var(--grey-text);
   display: none;
 }
 .header .nav .nav-list .nav-item .sub-list li {
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
   font-weight: bold;
+}
+.header .nav .nav-list .nav-item .sub-list li a {
+  color: var(--grey-text);
 }
 .header .nav .nav-list .nav-item .active {
   display: block;
@@ -114,13 +129,14 @@ body {
   transform: rotate(180deg);
 }
 .header .nav .nav-buttons {
-  border-top: 2px solid var(--grayish-blue);
+  border-top: 2px solid var(--very-light-gray);
   margin: 0 2rem;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
 .header .nav .nav-buttons a {
   display: block;
+  color: var(--very-dark-blue);
   font-weight: bold;
   margin-top: 2rem;
 }
@@ -149,13 +165,13 @@ body {
   color: var(--white);
 }
 .hero .container .content h1 {
-  font-size: 3.4rem;
+  font-size: clamp(3.4rem, 5vw, 6rem);
   color: var(--white);
 }
 .hero .container .content p {
   margin-top: 1.7rem;
   line-height: 1.3;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 2.65vw, 2rem);
   font-weight: 300;
 }
 .hero .container .buttons-container {
@@ -185,35 +201,34 @@ body {
 
 .about {
   text-align: center;
+  margin-top: clamp(10rem, 10vw, 18rem);
 }
 .about .title {
-  margin-top: 10rem;
-  font-size: 2.8rem;
+  margin-bottom: clamp(5rem, 6vw, 9rem);
+  font-size: clamp(2.8rem, 3vw, 4rem);
   font-weight: 600;
   letter-spacing: -0.8px;
 }
 .about .picture {
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 4rem;
   padding-top: 16.6rem;
   padding-bottom: 16.6rem;
 }
-.about .container h3 {
+.about .content h3 {
   padding: 0 3rem;
   margin-top: 4rem;
   font-size: 2.8rem;
 }
-.about .container p {
+.about .content p {
   margin-top: 1rem;
   padding: 0 2rem;
-  font-size: 1.8rem;
   font-weight: 100;
   color: var(--grey-text);
 }
 
 .state {
-  margin-top: 10rem;
+  margin-top: clamp(10rem, 20vw, 25rem);
   text-align: center;
 }
 .state .picture {
@@ -227,7 +242,7 @@ body {
   transform: translateX(-50%);
   z-index: 1000;
   width: min(100%, 52.2rem);
-  padding-bottom: clamp(40rem, 105%, 57.9rem);
+  padding-bottom: min(105%, 57.9rem);
 }
 .state .container {
   background-color: var(--very-dark-blue);
@@ -245,7 +260,6 @@ body {
 }
 .state .container p {
   margin-top: 2rem;
-  font-size: 1.8rem;
   font-weight: 100;
   color: var(--white);
 }
@@ -254,6 +268,9 @@ body {
   background-image: url(../images/illustration-editor-mobile.svg);
 }
 
+#second {
+  margin-top: clamp(8rem, 18vw, 26rem);
+}
 #second .picture {
   background-image: url(../images/illustration-laptop-mobile.svg);
 }
@@ -277,12 +294,202 @@ body {
   line-height: 1.8;
   color: var(--grayish-blue);
 }
-.footer .lists-container ul li:nth-child(1) a {
+.footer .lists-container ul li:nth-child(1) {
+  margin-bottom: 1.8rem;
   font-weight: 600;
   color: var(--white);
-  margin-bottom: 1.8rem;
 }
 .footer .attribution {
   padding-top: 8rem;
   font-size: 1.5rem;
+}
+
+@media (min-width: 950px) {
+  .header {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header .menu-btn {
+    display: none;
+  }
+  .header .nav {
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .header .nav .nav-list {
+    display: flex;
+    position: relative;
+    margin-left: 7rem;
+  }
+  .header .nav .nav-list .nav-item {
+    color: var(--white);
+  }
+  .header .nav .nav-list .nav-item:not(:first-child) {
+    margin-left: 3.3rem;
+  }
+  .header .nav .nav-list .nav-item .arrow-dark {
+    display: none;
+  }
+  .header .nav .nav-list .nav-item .arrow-light {
+    display: inline;
+  }
+  .header .nav .nav-list .nav-item .sub-list {
+    position: absolute;
+    margin: 2rem 0 0 0;
+    padding: 3rem 5rem 1rem 2rem;
+  }
+  .header .nav .nav-buttons {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header .nav .nav-buttons a {
+    display: inline-block;
+    margin: 0;
+    color: var(--white);
+  }
+  .header .nav .nav-buttons .btn {
+    margin: 0 0 0 2rem;
+    padding: 1.4rem 3.7rem;
+    font-weight: 900;
+    color: var(--light-red);
+    background: var(--white);
+  }
+  .header .nav .nav-buttons .btn .btn:hover {
+    color: var(--white);
+    background-color: var(--very-light-red);
+  }
+
+  .hero {
+    background-image: url(../images/bg-pattern-intro-desktop.svg), var(--background-gradient);
+    background-position: 25% 50%;
+  }
+
+  .about .picture {
+    position: absolute;
+    background-size: cover;
+    padding: 0;
+    z-index: -1;
+  }
+  .about .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .about .container .content {
+    width: 48rem;
+  }
+  .about .container .content h3,
+.about .container .content p {
+    padding: 0;
+  }
+
+  #first .picture {
+    background-image: url(../images/illustration-editor-desktop.svg);
+    left: 56%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(60vw, 105rem);
+    height: min(60vw, 100rem);
+  }
+  #first .container {
+    padding-left: 5vw;
+  }
+
+  #second .picture {
+    background-image: url(../images/illustration-laptop-desktop.svg);
+    right: 56%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(55vw, 105rem);
+    height: min(55vw, 90rem);
+  }
+  #second .container {
+    align-items: flex-end;
+    padding-right: 5vw;
+  }
+
+  .state {
+    position: relative;
+  }
+  .state .picture {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .state .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 11rem 0;
+    background-size: auto;
+    background-position: -14.5vw 80%, center;
+  }
+  .state .container .content {
+    width: 45rem;
+    text-align: left;
+  }
+
+  .footer .footer-container {
+    display: flex;
+  }
+  .footer .logo {
+    width: 20%;
+    margin-left: 8rem;
+  }
+  .footer .lists-container {
+    padding: 0 35rem 0 10rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-align: left;
+  }
+  .footer .lists-container ul {
+    margin: 0;
+  }
+}
+@media (min-width: 1050px) {
+  .state .container .content {
+    width: 50rem;
+    margin-right: 5vw;
+  }
+}
+@media (min-width: 1350px) {
+  .about .container .content {
+    width: 53rem;
+  }
+
+  #first .container {
+    padding-left: 10vw;
+  }
+
+  #second .container {
+    padding-right: 10vw;
+  }
+
+  .state .picture {
+    left: 10vw;
+  }
+  .state .container .content {
+    width: 53rem;
+    margin-right: 10vw;
+  }
+}
+@media (min-width: 2000px) {
+  .state .container .content {
+    margin-right: 15vw;
+  }
+
+  #second .container {
+    padding-right: 15vw;
+  }
 }/*# sourceMappingURL=main.css.map */
