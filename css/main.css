@@ -41,7 +41,7 @@ h4,
 h5,
 h6 {
   color: var(--very-dark-blue);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 p {
@@ -304,6 +304,26 @@ body {
   font-size: 1.5rem;
 }
 
+@media (min-width: 600px) {
+  .footer .footer-container {
+    display: flex;
+  }
+  .footer .logo {
+    width: 20%;
+    margin-left: clamp(4rem, 3vw, 8rem);
+  }
+  .footer .lists-container {
+    padding: 0 max(5rem, 15vw) 0 min(10rem, 8vw);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    text-align: left;
+  }
+  .footer .lists-container ul {
+    margin: 0;
+  }
+}
 @media (min-width: 950px) {
   .header {
     margin-left: 10vw;
@@ -333,6 +353,9 @@ body {
   .header .nav .nav-list .nav-item:not(:first-child) {
     margin-left: 3.3rem;
   }
+  .header .nav .nav-list .nav-item:hover {
+    text-decoration: underline;
+  }
   .header .nav .nav-list .nav-item .arrow-dark {
     display: none;
   }
@@ -343,6 +366,13 @@ body {
     position: absolute;
     margin: 2rem 0 0 0;
     padding: 3rem 5rem 1rem 2rem;
+  }
+  .header .nav .nav-list .nav-item .sub-list li a {
+    font-weight: 500;
+    color: #000;
+  }
+  .header .nav .nav-list .nav-item .sub-list li a:hover {
+    font-weight: 900;
   }
   .header .nav .nav-buttons {
     border: none;
@@ -369,6 +399,7 @@ body {
   .hero {
     background-image: url(../images/bg-pattern-intro-desktop.svg), var(--background-gradient);
     background-position: 25% 50%;
+    padding-top: clamp(20rem, 15vw, 30rem);
   }
 
   .about .picture {
@@ -437,25 +468,6 @@ body {
     width: 45rem;
     text-align: left;
   }
-
-  .footer .footer-container {
-    display: flex;
-  }
-  .footer .logo {
-    width: 20%;
-    margin-left: 8rem;
-  }
-  .footer .lists-container {
-    padding: 0 35rem 0 10rem;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    text-align: left;
-  }
-  .footer .lists-container ul {
-    margin: 0;
-  }
 }
 @media (min-width: 1050px) {
   .state .container .content {
@@ -485,11 +497,27 @@ body {
   }
 }
 @media (min-width: 2000px) {
+  .header {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+
+  .hero {
+    padding-bottom: 20rem;
+  }
+
+  #first .container {
+    padding-left: 20vw;
+  }
+
+  .state .picture {
+    left: 20vw;
+  }
   .state .container .content {
-    margin-right: 15vw;
+    margin-right: 20vw;
   }
 
   #second .container {
-    padding-right: 15vw;
+    padding-right: 20vw;
   }
 }/*# sourceMappingURL=main.css.map */

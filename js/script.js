@@ -18,5 +18,12 @@ navItems.forEach(navItem => {
     navItem.onclick = () => {
         navItem.classList.toggle('active');
         navItem.querySelector('.sub-list').classList.toggle('active');
+
+        navItems.forEach(navItem2 => {
+            if (navItem !== navItem2) {
+                navItem2.classList.remove('active');
+                navItem2.querySelector('.sub-list').classList.remove('active');
+            }
+        });
     }
 })
